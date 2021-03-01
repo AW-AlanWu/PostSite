@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+    {% if latest_post_list %}
+        <ol>
+        {% for post in latest_post_list %}
+            <li><a href="/posts/{{ post.id }}/display">{{ post.pub_date }}</a></li>
+        {% endfor %}
+        </ol>
+    {% else %}
+        <p>No posts are available.</p>
+    {% endif %}
+    <h3><a href="/posts/post">這邊發文</a></h3>
+</body>
+</html>
